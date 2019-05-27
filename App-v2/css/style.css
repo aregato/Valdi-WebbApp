@@ -1,0 +1,194 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2018-mar-23, 18:24:26
+    Author     : hanne
+*/
+.center{
+    text-align: center;
+}
+.grid-layout{
+    display: grid;
+    /* container */
+    width: 99%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid-layout > header{
+    grid-area: header;
+    text-align: center;
+}
+.grid-layout > nav{grid-area: menu;}
+.grid-layout > main{grid-area: main;}
+.grid-layout > footer{grid-area: footer;}
+div.parallax > img.flower{
+    width: 10%;
+}
+div.image > img{
+    width: 10%;
+}
+div.four.wide.column.vigselring{
+    background-image: url("../images/main/headers/vigselringar.JPG");
+    height: 100%;
+    width: 100%;
+}
+a.column:hover{
+        opacity: 0.8;
+        filter: alpha(opacity=50); /* For IE8 and earlier */ 
+    }
+@media screen and (max-width: 550px){
+    .grid-layout{
+        grid-gap: 5px;
+        grid-template-areas:
+            "header"
+            "menu"
+            "main"
+            "footer";
+    }
+}
+@media screen and (min-width: 550px) and (max-width: 1020px){
+    .grid-layout{
+        grid-gap: 10px;
+        grid-template-columns: 25% auto auto auto;
+        grid-template-rows: 100px auto auto auto auto;
+        grid-template-areas:
+            "header main main main"
+            "nav main main main"
+            "nav main main main"
+            "nav main main main"
+            "footer footer footer footer";
+    }
+}
+@media screen and (min-width: 1025px){
+    .grid-layout{
+        grid-gap: 10px;
+        grid-template-areas:
+            "header"
+            "menu"
+            "nav"
+            "main"
+            "footer";
+    }
+    .grid-layout > header{
+        grid-area: header;
+        height: 300px;
+    }
+    .grid-layout > header > a > img{
+        padding: 10px;
+        margin-top: 4%;
+    }
+    .grid-layout > nav{
+        justify-content: center;
+    }
+    .grid-layout > nav > a,.grid-layout > nav > div{
+        padding: 10px 100px !important;
+        font-size: 20px;
+    }
+    a.julery{
+        text-decoration: none;
+        color: black;
+        font-weight: 600;
+    }
+    .grid-layout > main > .parallax{
+        height: 600px;
+        background-image: url("../images/backgrounds/big_flower.JPG");
+        
+        /* Set a specific height */
+        min-height: 500px; 
+        
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .grid-layout > main > .parallax.tva{
+        height: 700px;
+    }
+    .welcome{
+        background-color: rgba(255, 255, 255, 0.6);
+        padding: 50px;
+        border-radius: 5px;
+        text-align: center;
+    }
+    p.intro{
+        font-size: 28px;
+    }
+    h1.intro{
+        font-size: 36px;
+        color: rgba(0,0,0, 0.7)
+    }
+    .store{
+        padding: 50px;
+        border-radius: 5px;
+        text-align: center;
+        
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .store > .cards{
+        justify-content: center;
+    }
+    .parallax > h1.center{
+        color: white;
+        font-size: 42px;
+    }
+    div.ui.container.headers > div.ui.grid{
+        margin-bottom: 20px;
+    }
+    
+    a.column{}
+    a.ten.wide.column.vigsel{
+        background-image: url("../images/main/headers/slide3.jpg");
+        
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 300px;
+        
+    }
+    a.ten.wide.column.wedding{
+        background-image: url("../images/main/headers/slide1.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 300px;
+        margin-right: 10px;
+    }
+    a.five.wide.column.unique{
+        background-image: url("../images/main/headers/guldringdiamant.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 300px;
+    }
+    a.five.wide.column.vig{
+        background-image: url("../images/main/headers/nwe_vigsel.JPG");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 300px;
+    }
+    a.column > h2{
+        color: black;
+        margin-top: 238px;
+        border-radius: 5px;
+    }
+    a.column > h2.white{
+        background-color: rgba(255,255,255,0.2);
+        width: 43%;
+        text-align: center;
+    }
+    a.card{
+        margin-right: 2% !important;
+        margin-left: 2% !important;
+    }
+    .headers > div > a > h2{
+        font-size: 36px;
+    }
+}
